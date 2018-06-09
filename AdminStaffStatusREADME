@@ -1,0 +1,19 @@
+%#1Count% = Servergroup #1 online (counter) | f.e. '2'
+%#2Count% = Servergroup #2 online (counter) | f.e. '6'
+%#3Count% = Servergroup #3 online (counter) | f.e. '13'
+%#4Count% = Servergroup #4 online (counter) | f.e. '1'
+%#5Count% = Servergroup #5 online (counter) | f.e. '7'
+
+%#1Names% = Servergroup #1 online (List of all names) | f.e. 'John, Markus, Marianna,'
+%#2Names% = Servergroup #2 online (List of all names) | f.e. 'Lucas,Momo,realG1337,'
+%#3Names% = Servergroup #3 online (List of all names) | f.e. 'Everlike, SchmitZZZ, FlyTh,'
+%#4Names% = Servergroup #4 online (List of all names) | f.e. 'Korn, Maxwell, MaxFarewell, Diesmon,'
+%#5Names% = Servergroup #5 online (List of all names) | f.e. 'HarryCat, Andi Wand, Eleanor Rigby,'
+
+%#1Status% =  Servergroup #1 status | f.e. 'online'
+%#2Status% =  Servergroup #2 status | f.e. 'offline'
+%#3Status% =  Servergroup #3 status | f.e. 'online' 
+%#4Status% =  Servergroup #4 status | f.e. 'offline'
+%#5Status% =  Servergroup #5 status | f.e. 'online'
+
+%allUserCount% = Users online total (counter) | f.e. '46'
