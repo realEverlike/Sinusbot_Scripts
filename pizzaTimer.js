@@ -1,6 +1,6 @@
 registerPlugin({
     name: 'PizzaTimer',
-    version: '0.5',
+    version: '0.5.1',
     description: 'Do never forget your pizza in the oven again!',
     author: 'Everlike <everlikezz@gmail.com>',
     vars: [
@@ -58,7 +58,12 @@ registerPlugin({
 	var defaulttime = config.defaulttime || 13;
 	var t1 = '^';
 	var t2 = ' *(\\d*)$';
-	var triggermsg = t1 + config.triggermsg + t2 || '(/^!pizza *(\d*)$/)';
+	if (config.triggermsg != 0) {
+	var triggermsg = t1 + config.triggermsg + t2;
+	}
+	else {
+		var triggermsg = t1 + '!pizza' + t2;
+	}
 	
     event.on('chat', function (ev) {
 		var match = ev.text.match(new RegExp(triggermsg))
@@ -78,16 +83,6 @@ registerPlugin({
             setTimeout(function(){
                 ev.client.poke(msg)
             }, parseInt(match[1] || defaulttime) * 60000)
-        }
-		// This is just for debug reasons. 
-		/*
-		else if (ev.text.match('tellme')) {
-			ev.client.chat(triggermsg)
-		}
-		else if (ev.text.match('tellme')) {
-			ev.client.chat(triggermsg)
-		}
-		*/
-		
+        }		
     });
 });
